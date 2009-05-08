@@ -7,7 +7,7 @@ set :port, ARGV[0] || 4567
 
 get '*' do
   file = File.join('.', params[:splat].first)
-  if File.exist?(file) && !File.file?(file)
+  if File.directory?(file)
     file = File.join(file, 'index.html')
   end
   

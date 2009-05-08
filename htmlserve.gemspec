@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'htmlserve'
-  s.version = "1.0.1"
+  s.version = "1.0.2"
   s.platform = Gem::Platform::RUBY
   s.summary = "A simple sinatra based server for rendering HTML sites"
   
