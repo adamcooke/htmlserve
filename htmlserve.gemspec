@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'htmlserve'
-  s.version = "1.0.2"
+  s.version = "1.0.3"
   s.platform = Gem::Platform::RUBY
   s.summary = "A simple sinatra based server for rendering HTML sites"
   
@@ -9,6 +9,8 @@ Gem::Specification.new do |s|
 
   s.bindir = "bin"
   s.executables << "htmlserve"
+  
+  s.add_dependency 'sinatra', '>= 0.9.1.1'
 
   s.author = "Adam Cooke"
   s.email = "adam@atechmedia.com"
