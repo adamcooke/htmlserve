@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+## I am fully aware of how nasty this is, but I actually don't know enough about Sinatra to make
+## `htmlserve` execute itself when run through the RubyGems 'bin wrapper'. Suggestions for improvement
+## are more than welcome.
+
+ruby_version = File.join(File.dirname(__FILE__), 'htmlserve.rb')
+exec("/usr/bin/env ruby #{ruby_version} #{ARGV[0]}")
