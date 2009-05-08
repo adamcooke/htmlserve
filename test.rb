@@ -1,2 +1,0 @@
-load 'bin/htmlserve'
-
