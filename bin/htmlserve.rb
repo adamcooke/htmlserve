@@ -10,7 +10,7 @@ mappings = {:css => "text/css",  :html => "text/html"}
 
 get '*' do
   file = File.join('.', params[:splat].first)
-  if File.exist?(file) && !File.file?(file)
+  if File.directory?(file)
     file = File.join(file, 'index.html')
   end
   

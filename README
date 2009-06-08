@@ -1,4 +1,12 @@
 Very simple application to render a folder of HTML and it's associated assets.
 
+Install
+=================================================================================
+1. gem sources -a http://gems.github.com
+2. sudo gem install adamcooke-htmlserve
+3. Enjoy!
+
+Usage
+=================================================================================
 1. cd to the folder you wish to use. e.g. cd /path/to/folder
 2. Run HTML serve. e.g. htmlserve {port (default 4567)}
