@@ -5,6 +5,9 @@ require 'sinatra'
 
 set :port, ARGV[0] || 4567
 
+## Map file extensions to content types
+mappings = {:css => "text/css",  :html => "text/html"}
+
 get '*' do
   file = File.join('.', params[:splat].first)
   if File.exist?(file) && !File.file?(file)
@@ -12,7 +15,12 @@ get '*' do
   end
   
   if File.file?(file)
-    properties = `file -b -i #{file}`.chomp
+    extension = file.split('.').last.to_sym
+    if mappings[extension]
+      properties = mappings[extension]
+    else
+      properties = `file -b -i #{file}`.chomp
+    end
     file_contents = File.read(file)
     
     headers(
